@@ -4,86 +4,200 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iris: IPTV Pro - Legal Center</title>
+    <title>Iris: IPTV Player Pro</title>
     <style>
+        :root {
+            --primary: #007AFF;
+            --bg: #0a0a0a;
+            --card-bg: #161616;
+            --text: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
             margin: 0;
-            background: linear-gradient(135deg, #1a1a1a 0%, #007AFF 100%);
-            color: white;
-            text-align: center;
+            line-height: 1.6;
         }
 
         .container {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 24px;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
-            max-width: 400px;
-            width: 90%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .logo {
-            font-size: 48px;
+        /* Hero Section */
+        header {
+            padding: 100px 0 60px;
+            text-align: center;
+            background: radial-gradient(circle at top, #007AFF33 0%, transparent 70%);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            letter-spacing: -2px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-dim);
+            margin: 20px 0 40px;
+        }
+
+        .badge-link img {
+            height: 60px;
+            transition: transform 0.2s;
+        }
+
+        .badge-link img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 60px 0;
+        }
+
+        .feature-card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid #ffffff10;
+        }
+
+        .feature-card h3 {
+            color: var(--primary);
+            margin-top: 0;
+        }
+
+        /* How it works */
+        .steps {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .step-list {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .step-item {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .step-number {
+            background: var(--primary);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
             font-weight: bold;
-            margin-bottom: 10px;
-            letter-spacing: -1px;
         }
 
-        p {
-            opacity: 0.8;
-            margin-bottom: 30px;
+        /* Footer */
+        footer {
+            padding: 60px 0;
+            border-top: 1px solid #ffffff10;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-dim);
         }
 
-        .btn {
-            display: block;
-            background: white;
-            color: #007AFF;
+        .footer-links {
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text);
             text-decoration: none;
-            padding: 15px;
-            border-radius: 12px;
-            margin-bottom: 15px;
-            font-weight: 600;
-            transition: transform 0.2s, background 0.2s;
+            margin: 0 15px;
         }
 
-        .btn:hover {
-            transform: translateY(-2px);
-            background: #f0f0f0;
+        .footer-links a:hover {
+            color: var(--primary);
         }
 
-        .btn-outline {
-            background: transparent;
-            border: 1px solid white;
-            color: white;
-        }
-
-        .btn-outline:hover {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
         }
     </style>
+    <script defer src="https://insight.ayris.tech/script.js"
+        data-website-id="cb8566d4-9f4c-4c95-8c63-4b2f8502b625"></script>
 </head>
 
 <body>
 
-    <div class="container">
-        <div class="logo">Iris</div>
-        <p>Premium IPTV Experience</p>
-
-        <a href="privacy.html" class="btn">Privacy Policy</a>
-        <a href="terms.html" class="btn btn-outline">Terms of Use (EULA)</a>
-
-        <div style="margin-top: 20px; font-size: 12px; opacity: 0.5;">
-            &copy; 2026 Iris: IPTV Pro. All rights reserved.
+    <header>
+        <div class="container">
+            <h1>Iris</h1>
+            <p class="hero-subtitle">Premium IPTV Experience. 7-Day Free Trial.</p>
+            <a href="#" class="badge-link">
+                <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-us?size=250x83&amp;releaseDate=1276560000&h=h6s7"
+                    alt="Download on the App Store">
+            </a>
         </div>
+    </header>
+
+    <div class="container">
+        <section class="features">
+            <div class="feature-card">
+                <h3>Pure Performance</h3>
+                <p>Built with React Native for smooth navigation and fast channel switching.</p>
+            </div>
+            <div class="feature-card">
+                <h3>7-Day Trial</h3>
+                <p>Access all pro features for 7 days. Experience the quality before you buy.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Privacy Focused</h3>
+                <p>No account needed. Your playlists and viewing habits stay on your device.</p>
+            </div>
+        </section>
+
+        <section class="steps">
+            <h2>Getting Started</h2>
+            <div class="step-list">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <p>Download Iris from App Store</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <p>Import M3U or Xtream Codes</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <p>Start your 7-day free trial</p>
+                </div>
+            </div>
+        </section>
     </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Use</a>
+                <a href="mailto:support@irisiptv.online">Support</a>
+            </div>
+            <p>&copy; 2026 Iris: IPTV Player Pro. Iris does not provide any media content.</p>
+        </div>
+    </footer>
 
 </body>
 
